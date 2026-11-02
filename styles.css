@@ -84,3 +84,27 @@ footer {
   color: #94a3b8 !important;
 }
 
+
+
+/* Ensure Projects Cards are Deep Dark with high-contrast White Text */
+.projects-section .bg-white,
+.projects-section .project-card,
+#projects .p-8 {
+  background-color: #12141c !important;
+  color: #ffffff !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+.projects-section h2,
+.projects-section h3,
+.projects-section strong,
+#projects h2,
+#projects h3,
+#projects strong {
+  color: #ffffff !important;
+}
+.projects-section p,
+.projects-section li,
+#projects p,
+#projects li {
+  color: #cbd5e1 !important;
+}
