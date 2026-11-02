@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Harsha Vardhan Reddy C — Software Engineer & Data Analyst</title>
+  <meta name="description" content="Harsha Vardhan Reddy C is a Software Engineer & Data Analyst building high-performance applications, Android apps with Razorpay, and scalable data pipelines with Python, SQL, Databricks, and modern BI dashboards." />
+  <meta name="author" content="Harsha Vardhan Reddy C" />
+  <meta name="theme-color" content="#FF4F12" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2250%22 fill=%22%23FF4F12%22/><text y=%2266%22 x=%2250%22 font-size=%2252%22 font-family=%22system-ui%22 font-weight=%22900%22 text-anchor=%22middle%22 fill=%22white%22>H</text></svg>" />
+
+  <!-- Google Fonts: Syne, Space Grotesk, JetBrains Mono, Caveat, Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+            display: ['Syne', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+            grotesk: ['"Space Grotesk"', 'sans-serif'],
+            handwriting: ['Caveat', 'cursive'],
+          },
+          colors: {
+            orangeHero: '#FF4F12',
+            orangeHover: '#e6450a',
+            obsidian: '#0b0c10',
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Complete CSS Bundle from Sivaram Charan's Portfolio -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="bg-[#0b0c10] text-white font-sans selection:bg-[#FF4F12]/30 selection:text-[#FF4F12] antialiased overflow-x-clip">
+
+  <!-- ==================== FIXED NAVBAR (EXACT SIVARAM CHARAN TEMPLATE) ==================== -->
+  <header id="siteNav" class="fixed top-0 left-0 right-0 z-50 transition-colors duration-300 bg-[#faf9f7]/95 lg:bg-[#faf9f7]/85 backdrop-blur-md border-b border-black/5">
+    <div class="max-w-[1440px] mx-auto px-6 md:px-10 flex items-center justify-between h-16 w-full">
+      
+      <!-- Brand Logo: Exact Sivaram Charan Style -->
+      <a href="#hero" class="flex items-center gap-1.5 group py-2" aria-label="Harsha Vardhan - Back to top">
+        <span id="navBrandName" class="font-grotesk text-[19px] font-bold tracking-tight text-[#1a1a1a] transition-colors">Harsha Vardhan</span>
+        <span class="w-2 h-2 rounded-full bg-[#FF4F12] mt-0.5"></span>
+      </a>
+
+      <!-- Center Nav Links: Exact Sivaram Charan Style -->
+      <nav id="navLinks" class="hidden lg:flex items-center gap-8 text-[13px] font-grotesk font-medium" aria-label="Main Navigation">
+        <a href="#hero" class="nav-link relative py-1 text-[#1a1a1a] transition-colors font-semibold">
+          Home
+          <span class="nav-indicator absolute bottom-0 left-0 right-0 h-[2px] bg-[#FF4F12] rounded-full"></span>
+        </a>
+        <a href="#about" class="nav-link relative py-1 text-[#666] hover:text-[#1a1a1a] transition-colors">
+          About
+        </a>
+        <a href="#projects" class="nav-link relative py-1 text-[#666] hover:text-[#1a1a1a] transition-colors">
+          Projects
+        </a>
+        <a href="#skills" class="nav-link relative py-1 text-[#666] hover:text-[#1a1a1a] transition-colors">
+          Skills
+        </a>
+        <a href="#experience" class="nav-link relative py-1 text-[#666] hover:text-[#1a1a1a] transition-colors">
+          Experience
+        </a>
+        <a href="#contact" class="nav-link relative py-1 text-[#666] hover:text-[#1a1a1a] transition-colors">
+          Contact
+        </a>
+      </nav>
+
+      <!-- Right Controls: Sound, CmdK, Resume -->
+      <div class="flex items-center gap-3">
+        
+        <!-- Audio Toggle -->
+        <button id="audioToggleBtn" title="Sound Effects" class="p-2 rounded-full border border-black/10 text-[#555] hover:text-[#FF4F12] transition-colors">
+          <i data-lucide="volume-2" id="audioIcon" class="w-4 h-4"></i>
+        </button>
+
+        <!-- Command Menu Trigger (Ctrl+K) -->
+        <button onclick="toggleCmdPalette()" title="Command Menu (Ctrl+K)" class="hidden sm:flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-black/10 text-xs font-mono text-[#555] hover:text-[#FF4F12] transition-colors">
+          <i data-lucide="terminal" class="w-3.5 h-3.5 text-[#FF4F12]"></i>
+          <kbd class="px-1.5 py-0.5 rounded bg-black/5 text-[10px] font-mono">⌘K</kbd>
+        </button>
+
+        <!-- Resume Button -->
+        <a href="Harsha_Vardhan_Reddy_Resume.pdf" download="Harsha_Vardhan_Reddy_Resume.pdf" class="inline-flex items-center gap-2 px-5 py-2 rounded-full text-[13px] font-grotesk font-semibold bg-[#FF4F12] text-white hover:bg-[#e6450a] shadow-md shadow-[#FF4F12]/20 transition-all">
+          <i data-lucide="download" class="w-3.5 h-3.5"></i>
+          <span>Resume</span>
+        </a>
+
+        <!-- Mobile Hamburger -->
+        <button id="mobileNavBtn" class="lg:hidden p-2 rounded-lg text-[#1a1a1a]">
+          <i data-lucide="menu" class="w-5 h-5"></i>
+        </button>
+
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Mobile Dropdown -->
+  <div id="mobileDropdown" class="hidden fixed inset-0 z-40 bg-black/80 backdrop-blur-lg pt-24 px-6 space-y-4 text-center">
+    <a href="#hero" onclick="toggleMobileNav()" class="block py-3 text-lg font-display text-white border-b border-white/10">Home</a>
+    <a href="#about" onclick="toggleMobileNav()" class="block py-3 text-lg font-display text-white border-b border-white/10">About</a>
+    <a href="#skills" onclick="toggleMobileNav()" class="block py-3 text-lg font-display text-white border-b border-white/10">Skills</a>
+    <a href="#projects" onclick="toggleMobileNav()" class="block py-3 text-lg font-display text-white border-b border-white/10">Projects</a>
+    <a href="#experience" onclick="toggleMobileNav()" class="block py-3 text-lg font-display text-white border-b border-white/10">Experience</a>
+    <a href="#contact" onclick="toggleMobileNav()" class="block py-3 text-lg font-display text-white">Contact</a>
+    <div class="pt-4 flex flex-col gap-2">
+      <a href="Harsha_Vardhan_Reddy_Resume.pdf" download class="hero-btn-primary justify-center">Download Resume (PDF)</a>
+      <a href="u-and-i-cabs.apk" download class="hero-btn-secondary justify-center text-white border-white/30">Download U & I Cabs APK (14 MB)</a>
+    </div>
+  </div>
+
+  <div id="main-content" class="relative">
+
+    <!-- ==================== HERO SECTION (EXACT SIVARAM CHARAN TEMPLATE) ==================== -->
+    <section id="hero" class="hero-section">
+      
+      <!-- Subtle Decorative Vector Canvas Backing (Orange Circle, Dots, Handwritten Arrow) -->
+      <div class="hero-bg-image" aria-hidden="true"></div>
+
+      <!-- Left Hero Typography & Content -->
+      <div class="hero-content">
+        
+        <!-- Eyebrow -->
+        <div class="hero-eyebrow">
+          <span class="hero-eyebrow-text">SOFTWARE DEVELOPER & DATA ANALYST</span>
+          <div class="hero-eyebrow-line"></div>
+        </div>
+
+        <!-- Big Editorial Headline Rows -->
+        <h1 class="hero-headline">
+          <span class="hero-headline-row">
+            <span class="hero-headline-clip"><span class="hero-headline-word">I</span></span>
+            <span class="hero-headline-clip"><span class="hero-headline-word">BUILD</span></span>
+          </span>
+          <span class="hero-headline-row">
+            <span class="hero-headline-clip"><span class="hero-headline-word">DIGITAL</span></span>
+            <span class="hero-headline-clip"><span class="hero-headline-word">PRODUCTS</span></span>
+          </span>
+          <span class="hero-headline-row">
+            <span class="hero-headline-clip"><span class="hero-headline-word">THAT</span></span>
+            <span class="hero-headline-clip"><span class="hero-headline-word hero-headline-accent">THINK.</span></span>
+          </span>
+        </h1>
+
+        <!-- Subtitle Description -->
+        <p class="hero-description">
+          Computer Science graduate (Reva University '26) building scalable full-stack applications with digital payments and high-performance data analytics pipelines.
+        </p>
+
+        <!-- CTA Action Buttons -->
+        <div class="hero-ctas">
+          <button onclick="scrollToSection('projects')" class="hero-btn-primary">
+            <span>Explore My Work</span>
+            <i data-lucide="arrow-down" class="w-4 h-4"></i>
+          </button>
+          <button onclick="scrollToSection('contact')" class="hero-btn-secondary">
+            <span>Let's Build Together</span>
+            <i data-lucide="sparkles" class="w-4 h-4 text-[#FF4F12]"></i>
+          </button>
+        </div>
+
+        <!-- Live Availability Badge -->
+        <div class="hero-availability">
+          <span class="hero-availability-dot"></span>
+          <span>OPEN TO FULL-TIME SWE & DATA ROLES (2026 BATCH)</span>
+        </div>
+
+        <!-- Stats Row -->
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <span class="hero-stat-value">14.2 MB</span>
+            <span class="hero-stat-label">ANDROID APK<br>BUILT & SIGNED</span>
+          </div>
+          <div class="hero-stat">
+            <span class="hero-stat-value">2x</span>
+            <span class="hero-stat-label">QLIK OFFICIAL<br>CERTIFIED</span>
+          </div>
+          <div class="hero-stat">
+            <span class="hero-stat-value">2026</span>
+            <span class="hero-stat-label">B.TECH GRAD<br>REVA UNIVERSITY</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Right: Real User Photo Cutout (Transparent BG Blending Into Circle) -->
+      <div class="hero-photo">
+        <img 
+          src="harsha-hero.png" 
+          alt="Harsha Vardhan Reddy C — Software Developer & Data Analyst" 
+          class="hero-photo-img" 
+          width="1296" 
+          height="1214" 
+          fetchpriority="high"
+          decoding="async"
+        />
+      </div>
+
+    </section>
+
+    <!-- ==================== ABOUT SECTION (EXACT SIVARAM CHARAN TEMPLATE) ==================== -->
+    <section id="about" class="about-section">
+      
+      <!-- Architectural Background Elements -->
+      <div class="about-bg-grid" aria-hidden="true"></div>
+      <div class="about-bg-dots" aria-hidden="true"></div>
+      <div class="about-orange-thread" aria-hidden="true"></div>
+      <div class="about-bg-word" aria-hidden="true">ABOUT</div>
+
+      <div class="about-grid">
+        
+        <!-- Opening Heading (Full Span) -->
+        <div class="about-opening">
+          <div class="about-eyebrow">
+            <span>BACKGROUND & IDENTITY</span>
+            <div class="about-eyebrow-line"></div>
+          </div>
+          
+          <h2 class="about-opening-heading">
+            ENGINEERING <br />
+            WITH <span class="accent">PRECISION.</span>
+          </h2>
+
+          <div class="about-handwriting">
+            <span class="arrow">↳</span>
+            <span>Software Developer & Data Analyst based in Bengaluru, India</span>
+          </div>
+
+          <p class="about-bio">
+            I’m graduating in 2026 with a B.Tech in Computer Science from <strong class="text-[#0b0b0b]">Reva University, Bengaluru</strong>. My passion is taking ideas from whiteboard architecture to production-ready software—whether that means implementing end-to-end UPI payments in a native Android cab app with Razorpay or writing optimized SQL and PySpark pipelines on Databricks.
+          </p>
+        </div>
+
+        <!-- Sticky Journey Sidebar Navigation -->
+        <aside class="hidden lg:block">
+          <div class="about-nav">
+            <div class="about-nav-header">EXPLORE JOURNEY</div>
+            <div class="about-nav-list">
+              <button onclick="scrollToSection('about-intro')" class="about-nav-item active">
+                <span>01</span><span>INTRO</span>
+              </button>
+              <button onclick="scrollToSection('about-journey')" class="about-nav-item">
+                <span>02</span><span>CAREER MILESTONES</span>
+              </button>
+              <button onclick="scrollToSection('about-focus')" class="about-nav-item">
+                <span>03</span><span>CORE FOCUS</span>
+              </button>
+              <button onclick="scrollToSection('about-athletics')" class="about-nav-item">
+                <span>04</span><span>ATHLETICS & LEADERSHIP</span>
+              </button>
+            </div>
+          </div>
+        </aside>
+
+        <!-- Right Content Narrative -->
+        <div class="space-y-16 py-6 min-w-0">
+          
+          <!-- Section 1: Intro -->
+          <div id="about-intro" class="space-y-4">
+            <h3 class="font-display font-bold text-2xl text-[#0b0b0b]">From Foundations to Full-Stack Execution</h3>
+            <p class="font-grotesk text-sm text-[#555] leading-relaxed">
+              During my academic and professional career, I have cultivated hands-on expertise in Object-Oriented Programming (OOP), Relational Database Management Systems (DBMS), and modern data science stacks. I value clean code, measurable performance gains, and straightforward user experiences.
+            </p>
+          </div>
+
+          <!-- Section 2: Career Milestones Timeline -->
+          <div id="about-journey" class="space-y-6">
+            <h3 class="font-display font-bold text-2xl text-[#0b0b0b]">Milestone Timeline</h3>
+            
+            <div class="space-y-6 border-l-2 border-[#FF4F12]/30 pl-6 relative">
+              
+              <div class="relative space-y-1">
+                <span class="absolute -left-[31px] top-1.5 w-3.5 h-3.5 rounded-full bg-[#FF4F12]"></span>
+                <span class="font-mono text-xs text-[#FF4F12] font-semibold">2022</span>
+                <h4 class="font-bold text-base text-[#0b0b0b]">Started B.Tech CSE at Reva University</h4>
+                <p class="text-xs text-[#666] leading-relaxed">Built strong fundamentals in Data Structures & Algorithms, DBMS, Python, and Statistical Methods.</p>
+              </div>
+
+              <div class="relative space-y-1">
+                <span class="absolute -left-[31px] top-1.5 w-3.5 h-3.5 rounded-full bg-[#FF4F12]"></span>
+                <span class="font-mono text-xs text-[#FF4F12] font-semibold">2023</span>
+                <h4 class="font-bold text-base text-[#0b0b0b]">Zoo Management System</h4>
+                <p class="text-xs text-[#666] leading-relaxed">Architected a normalized MySQL 3NF schema with full CRUD operations and SQL JOIN queries for administrative reporting.</p>
+              </div>
+
+              <div class="relative space-y-1">
+                <span class="absolute -left-[31px] top-1.5 w-3.5 h-3.5 rounded-full bg-[#FF4F12]"></span>
+                <span class="font-mono text-xs text-[#FF4F12] font-semibold">2024</span>
+                <h4 class="font-bold text-base text-[#0b0b0b]">Exploratory Data Analysis Engine</h4>
+                <p class="text-xs text-[#666] leading-relaxed">Conducted distribution analysis and generated correlation matrix heatmaps using Python, Pandas, Matplotlib, and Seaborn.</p>
+              </div>
+
+              <div class="relative space-y-1">
+                <span class="absolute -left-[31px] top-1.5 w-3.5 h-3.5 rounded-full bg-[#FF4F12]"></span>
+                <span class="font-mono text-xs text-[#FF4F12] font-semibold">2025</span>
+                <h4 class="font-bold text-base text-[#0b0b0b]">Dual Qlik Sense Official Certifications & Tata Simulation</h4>
+                <p class="text-xs text-[#666] leading-relaxed">Earned Qlik Sense Business Analyst & Data Architect qualifications; completed Tata Group Data Analytics job simulation.</p>
+              </div>
+
+              <div class="relative space-y-1">
+                <span class="absolute -left-[31px] top-1.5 w-3.5 h-3.5 rounded-full bg-[#FF4F12]"></span>
+                <span class="font-mono text-xs text-[#FF4F12] font-semibold">2026</span>
+                <h4 class="font-bold text-base text-[#0b0b0b]">U & I Cabs & Tap Academy Internship</h4>
+                <p class="text-xs text-[#666] leading-relaxed">Developed U & I Cabs Android cab app with live Razorpay UPI checkout; worked as Data Analyst Intern at Tap Academy on PySpark on Databricks & SQL optimization.</p>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Section 3: Core Focus Areas -->
+          <div id="about-focus" class="space-y-4">
+            <h3 class="font-display font-bold text-2xl text-[#0b0b0b]">Core Focus Areas</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div class="p-4 rounded-xl bg-white border border-black/5 shadow-sm space-y-1">
+                <div class="font-bold text-sm text-[#0b0b0b] flex items-center gap-2">
+                  <i data-lucide="smartphone" class="w-4 h-4 text-[#FF4F12]"></i>
+                  <span>Mobile & Payment Engineering</span>
+                </div>
+                <p class="text-xs text-[#666] leading-relaxed">End-to-end native Android apps, Razorpay UPI payment integration, exception recovery, and release distribution.</p>
+              </div>
+              <div class="p-4 rounded-xl bg-white border border-black/5 shadow-sm space-y-1">
+                <div class="font-bold text-sm text-[#0b0b0b] flex items-center gap-2">
+                  <i data-lucide="database" class="w-4 h-4 text-[#FF4F12]"></i>
+                  <span>Data Pipelines & BI Systems</span>
+                </div>
+                <p class="text-xs text-[#666] leading-relaxed">SQL optimization, PySpark on Databricks Lakehouse, Power BI, and certified Qlik Sense modeling.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Section 4: Athletics & Leadership -->
+          <div id="about-athletics" class="p-5 rounded-2xl bg-[#0b0b0b] text-white space-y-3">
+            <div class="flex items-center gap-2 text-[#FF4F12]">
+              <i data-lucide="trophy" class="w-5 h-5"></i>
+              <span class="font-mono text-xs font-bold uppercase tracking-wider">Athletics & Leadership</span>
+            </div>
+            <p class="text-xs text-slate-300 font-light leading-relaxed">
+              Competitive sports cultivate split-second tactical reflexes, composure under match pressure, and selfless team coordination.
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1 text-xs">
+              <div class="p-3 rounded-xl bg-white/5 border border-white/10 space-y-0.5">
+                <span class="font-bold text-white">Reva University CSE Cricket:</span>
+                <p class="text-slate-400">Represented CSE department in inter-department tournament under competitive pressure.</p>
+              </div>
+              <div class="p-3 rounded-xl bg-white/5 border border-white/10 space-y-0.5">
+                <span class="font-bold text-white">District-Level Kabaddi:</span>
+                <p class="text-slate-400">Represented school at district level—instilling stamina, mental toughness, and agile teamwork.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ==================== SKILLS SECTION (DARK OBSIDIAN THEME) ==================== -->
+    <section id="skills" class="py-24 px-6 md:px-12 max-w-7xl mx-auto relative z-10">
+      
+      <!-- Section Watermark -->
+      <div class="skills-bg-word" aria-hidden="true">SKILLS</div>
+      <div class="skills-bg-grid" aria-hidden="true"></div>
+      <div class="skills-bg-dots" aria-hidden="true"></div>
+
+      <!-- Section Title -->
+      <div class="space-y-3 mb-12 text-center max-w-2xl mx-auto relative z-10">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#FF4F12]/10 border border-[#FF4F12]/30 text-[#FF4F12] text-xs font-mono font-semibold">
+          <span>VERIFIED TECH STACK</span>
+        </div>
+        <h2 class="text-3xl sm:text-5xl font-display font-extrabold text-white tracking-tight">
+          Tools & Capabilities
+        </h2>
+        <p class="text-xs sm:text-sm text-slate-400 font-grotesk">
+          Applied across production software builds, data pipelines, and certified credentials.
+        </p>
+      </div>
+
+      <!-- Category Filter Tabs -->
+      <div class="flex flex-wrap items-center justify-center gap-2 mb-10 relative z-10 text-xs font-mono">
+        <button onclick="filterSkills('all')" class="skill-tab active px-4 py-2 rounded-full bg-[#FF4F12] text-white font-semibold">All Skills</button>
+        <button onclick="filterSkills('prog')" class="skill-tab px-4 py-2 rounded-full bg-[#181E2E] text-slate-300 hover:text-white border border-white/5">Programming & Mobile</button>
+        <button onclick="filterSkills('data')" class="skill-tab px-4 py-2 rounded-full bg-[#181E2E] text-slate-300 hover:text-white border border-white/5">Databases & Big Data</button>
+        <button onclick="filterSkills('bi')" class="skill-tab px-4 py-2 rounded-full bg-[#181E2E] text-slate-300 hover:text-white border border-white/5">BI & Analytics</button>
+        <button onclick="filterSkills('tools')" class="skill-tab px-4 py-2 rounded-full bg-[#181E2E] text-slate-300 hover:text-white border border-white/5">Engineering Tools</button>
+      </div>
+
+      <!-- Skills Cards Grid -->
+      <div id="skillsGrid" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 relative z-10">
+        
+        <!-- Python -->
+        <div class="skill-card p-5 rounded-2xl bg-[#131A2B]/80 border border-white/5 hover:border-[#FF4F12]/50 transition-all flex flex-col justify-between space-y-3" data-cat="prog">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-mono text-[#FF4F12]">Python</span>
+            <i data-lucide="terminal" class="w-4 h-4 text-[#FF4F12]"></i>
+          </div>
+          <div class="font-bold text-white text-base">Python 3</div>
+          <div class="text-[11px] text-slate-400 font-light">Pandas, NumPy, Matplotlib, Seaborn & OOP</div>
+        </div>
+
+        <!-- Android App Dev -->
+        <div class="skill-card p-5 rounded-2xl bg-[#131A2B]/80 border border-white/5 hover:border-[#FF4F12]/50 transition-all flex flex-col justify-between space-y-3" data-cat="prog">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-mono text-[#FF4F12]">Mobile</span>
+            <i data-lucide="smartphone" class="w-4 h-4 text-[#FF4F12]"></i>
+          </div>
+          <div class="font-bold text-white text-base">Android SDK</div>
+          <div class="text-[11px] text-slate-400 font-light">Native APK/AAB, Lifecycle & Booking Workflows</div>
+        </div>
+
+        <!-- SQL Optimization -->
+        <div class="skill-card p-5 rounded-2xl bg-[#131A2B]/80 border border-white/5 hover:border-[#FF4F12]/50 transition-all flex flex-col justify-between space-y-3" data-cat="data">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-mono text-[#FF4F12]">Databases</span>
+            <i data-lucide="database" class="w-4 h-4 text-[#FF4F12]"></i>
+          </div>
+          <div class="font-bold text-white text-base">Advanced SQL</div>
+          <div class="text-[11px] text-slate-400 font-light">Joins, Subqueries, GROUP BY, Window Functions</div>
+        </div>
+
+        <!-- MySQL 3NF -->
+        <div class="skill-card p-5 rounded-2xl bg-[#131A2B]/80 border border-white/5 hover:border-[#FF4F12]/50 transition-all flex flex-col justify-between space-y-3" data-cat="data">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-mono text-[#FF4F12]">Relational</span>
+            <i data-lucide="table" class="w-4 h-4 text-[#FF4F12]"></i>
+          </div>
+          <div class="font-bold text-white text-base">MySQL Engine</div>
+          <div class="text-[11px] text-slate-400 font-light">3NF Schema Design, Constraints & Indexing</div>
+        </div>
+
+        <!-- PySpark -->
+        <div class="skill-card p-5 rounded-2xl bg-[#131A2B]/80 border border-white/5 hover:border-[#FF4F12]/50 transition-all flex flex-col justify-between space-y-3" data-cat="data">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-mono text-[#FF4F12]">Big Data</span>
+            <i data-lucide="cpu" class="w-4 h-4 text-[#FF4F12]"></i>
+          </div>
+          <div class="font-bold text-white text-base">PySpark</div>
+          <div class="text-[11px] text-slate-400 font-light">Distributed Transformations & Big Data Ingestion</div>
+        </div>
+
+        <!-- Databricks -->
+        <div class="skill-card p-5 rounded-2xl bg-[#131A2B]/80 border border-white/5 hover:border-[#FF4F12]/50 transition-all flex flex-col justify-between space-y-3" data-cat="data">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-mono text-[#FF4F12]">Cloud Platform</span>
+            <i data-lucide="layers" class="w-4 h-4 text-[#FF4F12]"></i>
+          </div>
+          <div class="font-bold text-white text-base">Databricks</div>
+          <div class="text-[11px] text-slate-400 font-light">Lakehouse Clusters, Notebooks & Execution</div>
+        </div>
+
+        <!-- Power BI -->
+        <div class="skill-card p-5 rounded-2xl bg-[#131A2B]/80 border border-white/5 hover:border-[#FF4F12]/50 transition-all flex flex-col justify-between space-y-3" data-cat="bi">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-mono text-[#FF4F12]">Visualization</span>
+            <i data-lucide="bar-chart-2" class="w-4 h-4 text-[#FF4F12]"></i>
+          </div>
+          <div class="font-bold text-white text-base">Power BI</div>
+          <div class="text-[11px] text-slate-400 font-light">Executive KPI Dashboards & Trend Storytelling</div>
+        </div>
+
+        <!-- Qlik Sense (Certified) -->
+        <div class="skill-card p-5 rounded-2xl bg-[#131A2B]/80 border border-white/5 hover:border-[#FF4F12]/50 transition-all flex flex-col justify-between space-y-3" data-cat="bi">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-mono text-[#FF4F12]">2x Certified</span>
+            <i data-lucide="award" class="w-4 h-4 text-[#FF4F12]"></i>
+          </div>
+          <div class="font-bold text-white text-base">Qlik Sense</div>
+          <div class="text-[11px] text-slate-400 font-light">Data Modeling, ETL Load Scripts & Associative Engine</div>
+        </div>
+
+        <!-- Razorpay Gateway -->
+        <div class="skill-card p-5 rounded-2xl bg-[#131A2B]/80 border border-white/5 hover:border-[#FF4F12]/50 transition-all flex flex-col justify-between space-y-3" data-cat="tools">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-mono text-[#FF4F12]">Payments</span>
+            <i data-lucide="credit-card" class="w-4 h-4 text-[#FF4F12]"></i>
+          </div>
+          <div class="font-bold text-white text-base">Razorpay Gateway</div>
+          <div class="text-[11px] text-slate-400 font-light">UPI Checkout, Cards, Digital Payments & Webhooks</div>
+        </div>
+
+        <!-- Git & GitHub -->
+        <div class="skill-card p-5 rounded-2xl bg-[#131A2B]/80 border border-white/5 hover:border-[#FF4F12]/50 transition-all flex flex-col justify-between space-y-3" data-cat="tools">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-mono text-[#FF4F12]">DevOps</span>
+            <i data-lucide="git-branch" class="w-4 h-4 text-[#FF4F12]"></i>
+          </div>
+          <div class="font-bold text-white text-base">Git & GitHub</div>
+          <div class="text-[11px] text-slate-400 font-light">Branch Workflows, Release Versioning & CI</div>
+        </div>
+
+        <!-- REST APIs -->
+        <div class="skill-card p-5 rounded-2xl bg-[#131A2B]/80 border border-white/5 hover:border-[#FF4F12]/50 transition-all flex flex-col justify-between space-y-3" data-cat="tools">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-mono text-[#FF4F12]">Integration</span>
+            <i data-lucide="network" class="w-4 h-4 text-[#FF4F12]"></i>
+          </div>
+          <div class="font-bold text-white text-base">RESTful APIs</div>
+          <div class="text-[11px] text-slate-400 font-light">Client-Server Protocol, JSON & Error Handling</div>
+        </div>
+
+        <!-- Engineering Practices -->
+        <div class="skill-card p-5 rounded-2xl bg-[#131A2B]/80 border border-white/5 hover:border-[#FF4F12]/50 transition-all flex flex-col justify-between space-y-3" data-cat="tools">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-mono text-[#FF4F12]">Quality</span>
+            <i data-lucide="check-circle-2" class="w-4 h-4 text-[#FF4F12]"></i>
+          </div>
+          <div class="font-bold text-white text-base">SDLC & Testing</div>
+          <div class="text-[11px] text-slate-400 font-light">Requirements, E2E Testing & Clear Documentation</div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ==================== FEATURED PROJECTS SECTION ==================== -->
+    <section id="projects" class="projects-section py-24 px-6 md:px-12 max-w-7xl mx-auto relative z-10">
+      
+      <!-- Section Watermark -->
+      <div class="projects-bg-word" aria-hidden="true">PROJECTS</div>
+      <div class="projects-bg-grid" aria-hidden="true"></div>
+      <div class="projects-bg-dots" aria-hidden="true"></div>
+
+      <!-- Section Title -->
+      <div class="space-y-3 mb-12 text-center max-w-2xl mx-auto relative z-10">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#FF4F12]/10 border border-[#FF4F12]/30 text-[#FF4F12] text-xs font-mono font-semibold">
+          <span>REAL-WORLD SYSTEMS</span>
+        </div>
+        <h2 class="text-3xl sm:text-5xl font-display font-extrabold text-white tracking-tight">
+          Featured Projects
+        </h2>
+        <p class="text-xs sm:text-sm text-slate-400 font-grotesk">
+          Production applications, analytical pipelines, and relational database systems.
+        </p>
+      </div>
+
+      <!-- Project Cards Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 relative z-10">
+        
+        <!-- PROJECT 1: U & I CABS -->
+        <div class="p-8 rounded-3xl bg-[#131A2B]/90 border border-white/10 hover:border-[#FF4F12]/50 transition-all flex flex-col justify-between space-y-6 backdrop-blur-xl group shadow-xl">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-mono text-[#FF4F12] bg-[#FF4F12]/10 px-3 py-1 rounded-full font-semibold">
+                Android APK • Razorpay • REST APIs
+              </span>
+              <span class="text-xs font-mono text-slate-400">2026</span>
+            </div>
+
+            <h3 class="text-2xl font-display font-bold text-white group-hover:text-[#FF4F12] transition-colors">
+              U & I Cabs — Cab Booking Android Application
+            </h3>
+
+            <p class="text-sm text-slate-300 leading-relaxed font-light">
+              Developed a full-lifecycle cab booking Android application (packaged as APK and AAB) with a user-friendly interface, complete ride booking and cancellation workflows, and digital advance payments.
+            </p>
+
+            <ul class="text-xs text-slate-400 space-y-2 list-disc list-inside font-light">
+              <li><strong class="text-white">Razorpay Gateway Integration:</strong> Integrated UPI (Google Pay, PhonePe, Paytm) and digital cards for secure ride advance payments.</li>
+              <li><strong class="text-white">Backend APIs & Deployment:</strong> Connected client frontend with backend APIs, handled backend deployment, and configured payment verification flows.</li>
+              <li><strong class="text-white">Edge Case Handling:</strong> Resolved payment failures, trip cancellations, and user state with Git for source control.</li>
+            </ul>
+          </div>
+
+          <div class="pt-4 border-t border-white/10 flex items-center justify-between">
+            <div class="flex flex-wrap gap-2 text-xs font-mono text-slate-400">
+              <span class="bg-black/30 px-2 py-0.5 rounded">Android SDK</span>
+              <span class="bg-black/30 px-2 py-0.5 rounded">Razorpay</span>
+              <span class="bg-black/30 px-2 py-0.5 rounded">REST APIs</span>
+            </div>
+            <a href="u-and-i-cabs.apk" download class="hero-btn-primary !py-2 !px-4 !text-xs flex items-center gap-1.5">
+              <i data-lucide="download" class="w-3.5 h-3.5"></i>
+              <span>Download APK (14 MB)</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- PROJECT 2: TAP ACADEMY DATA ANALYTICS & BI -->
+        <div class="p-8 rounded-3xl bg-[#131A2B]/90 border border-white/10 hover:border-[#FF4F12]/50 transition-all flex flex-col justify-between space-y-6 backdrop-blur-xl group shadow-xl">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-mono text-[#FF4F12] bg-[#FF4F12]/10 px-3 py-1 rounded-full font-semibold">
+                Databricks • PySpark • SQL • BI
+              </span>
+              <span class="text-xs font-mono text-slate-400">Jun – Sep 2026</span>
+            </div>
+
+            <h3 class="text-2xl font-display font-bold text-white group-hover:text-[#FF4F12] transition-colors">
+              Enterprise Data Pipelines & BI Dashboards
+            </h3>
+
+            <p class="text-sm text-slate-300 leading-relaxed font-light">
+              Extracted, transformed, and visualised large-scale datasets during internship at Tap Academy, writing optimized SQL queries and scaling analytics with PySpark on Databricks.
+            </p>
+
+            <ul class="text-xs text-slate-400 space-y-2 list-disc list-inside font-light">
+              <li><strong class="text-white">SQL Optimization:</strong> Authored complex queries (joins, subqueries, GROUP BY) on relational databases to accelerate business reporting.</li>
+              <li><strong class="text-white">PySpark on Databricks:</strong> Scaled data pipeline transformations across high-volume dataset batches.</li>
+              <li><strong class="text-white">Executive KPI Dashboards:</strong> Constructed Power BI and Qlik Sense dashboards with KPI tiles and custom load scripts.</li>
+            </ul>
+          </div>
+
+          <div class="pt-4 border-t border-white/10 flex items-center justify-between">
+            <div class="flex flex-wrap gap-2 text-xs font-mono text-slate-400">
+              <span class="bg-black/30 px-2 py-0.5 rounded">SQL</span>
+              <span class="bg-black/30 px-2 py-0.5 rounded">PySpark</span>
+              <span class="bg-black/30 px-2 py-0.5 rounded">Databricks</span>
+              <span class="bg-black/30 px-2 py-0.5 rounded">Power BI</span>
+            </div>
+            <a href="Harsha_Vardhan_Reddy_Resume.pdf" download class="text-xs font-mono text-[#FF4F12] hover:text-[#ff7a5c] flex items-center gap-1 font-semibold">
+              <span>View Case Study</span> <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- PROJECT 3: EXPLORATORY DATA ANALYSIS -->
+        <div class="p-8 rounded-3xl bg-[#131A2B]/90 border border-white/10 hover:border-[#FF4F12]/50 transition-all flex flex-col justify-between space-y-6 backdrop-blur-xl group shadow-xl">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-mono text-[#FF4F12] bg-[#FF4F12]/10 px-3 py-1 rounded-full font-semibold">
+                Python • Pandas • Seaborn
+              </span>
+              <span class="text-xs font-mono text-slate-400">April 2024</span>
+            </div>
+
+            <h3 class="text-2xl font-display font-bold text-white group-hover:text-[#FF4F12] transition-colors">
+              Exploratory Data Analysis & Statistical Modeling
+            </h3>
+
+            <p class="text-sm text-slate-300 leading-relaxed font-light">
+              Conducted exhaustive data cleaning, hypothesis validation, distribution curve testing, and correlation heatmaps to surface latent business patterns.
+            </p>
+
+            <ul class="text-xs text-slate-400 space-y-2 list-disc list-inside font-light">
+              <li><strong class="text-white">Data Cleansing:</strong> Imputed missing attributes, handled skewed distributions, and pruned statistical outliers.</li>
+              <li><strong class="text-white">Correlation Heatmaps:</strong> Identified multi-collinearity and statistical variance using Matplotlib and Seaborn.</li>
+              <li><strong class="text-white">Stakeholder Storytelling:</strong> Documented findings clearly so takeaways could be acted on by leadership.</li>
+            </ul>
+          </div>
+
+          <div class="pt-4 border-t border-white/10 flex items-center justify-between">
+            <div class="flex flex-wrap gap-2 text-xs font-mono text-slate-400">
+              <span class="bg-black/30 px-2 py-0.5 rounded">Python</span>
+              <span class="bg-black/30 px-2 py-0.5 rounded">Pandas</span>
+              <span class="bg-black/30 px-2 py-0.5 rounded">NumPy</span>
+              <span class="bg-black/30 px-2 py-0.5 rounded">Seaborn</span>
+            </div>
+            <span class="text-xs font-mono text-slate-500">Data Science</span>
+          </div>
+        </div>
+
+        <!-- PROJECT 4: ZOO MANAGEMENT SYSTEM -->
+        <div class="p-8 rounded-3xl bg-[#131A2B]/90 border border-white/10 hover:border-[#FF4F12]/50 transition-all flex flex-col justify-between space-y-6 backdrop-blur-xl group shadow-xl">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-mono text-[#FF4F12] bg-[#FF4F12]/10 px-3 py-1 rounded-full font-semibold">
+                Relational Database • MySQL
+              </span>
+              <span class="text-xs font-mono text-slate-400">2023</span>
+            </div>
+
+            <h3 class="text-2xl font-display font-bold text-white group-hover:text-[#FF4F12] transition-colors">
+              Zoo Management Database System
+            </h3>
+
+            <p class="text-sm text-slate-300 leading-relaxed font-light">
+              Designed a database-driven management application with a normalized MySQL backend, implementing full CRUD operations and cross-table SQL JOIN reporting.
+            </p>
+
+            <ul class="text-xs text-slate-400 space-y-2 list-disc list-inside font-light">
+              <li><strong class="text-white">Normalized 3NF Schema:</strong> Structured entities for animals, enclosures, caretakers, and ticket sales to prevent update anomalies.</li>
+              <li><strong class="text-white">Optimized Queries:</strong> Authored indexed SQL retrieval queries adhering to OOP principles and SDLC practices.</li>
+              <li><strong class="text-white">Workflow Design:</strong> Structured around end-user workflows to keep data entry and reporting simple and easy to use.</li>
+            </ul>
+          </div>
+
+          <div class="pt-4 border-t border-white/10 flex items-center justify-between">
+            <div class="flex flex-wrap gap-2 text-xs font-mono text-slate-400">
+              <span class="bg-black/30 px-2 py-0.5 rounded">MySQL</span>
+              <span class="bg-black/30 px-2 py-0.5 rounded">3NF Schema</span>
+              <span class="bg-black/30 px-2 py-0.5 rounded">SQL Joins</span>
+              <span class="bg-black/30 px-2 py-0.5 rounded">CRUD</span>
+            </div>
+            <span class="text-xs font-mono text-slate-500">Database Design</span>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ==================== EXPERIENCE & INTERNSHIP SECTION ==================== -->
+    <section id="experience" class="py-20 px-6 md:px-12 max-w-7xl mx-auto relative z-10">
+      
+      <div class="space-y-3 mb-12 text-center max-w-2xl mx-auto">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#FF4F12]/10 border border-[#FF4F12]/30 text-[#FF4F12] text-xs font-mono font-semibold">
+          <span>CAREER TRACK</span>
+        </div>
+        <h2 class="text-3xl sm:text-5xl font-display font-extrabold text-white tracking-tight">
+          Work Experience
+        </h2>
+      </div>
+
+      <div class="p-8 sm:p-10 rounded-3xl bg-[#131A2B]/90 border border-white/10 space-y-6 backdrop-blur-xl">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-white/10 pb-4">
+          <div>
+            <h3 class="text-2xl font-display font-bold text-white">Data Analyst Intern</h3>
+            <div class="text-sm font-semibold text-[#FF4F12]">Tap Academy • Bengaluru, India</div>
+          </div>
+          <span class="text-xs font-mono bg-white/5 border border-white/10 px-3 py-1 rounded-full text-slate-300 w-fit">
+            June 2026 – September 2026
+          </span>
+        </div>
+
+        <ul class="text-sm text-slate-300 space-y-3 list-disc list-inside font-light leading-relaxed">
+          <li>Wrote optimised SQL queries (joins, subqueries, GROUP BY) to extract and transform data from relational databases for analysis.</li>
+          <li>Cleaned, analysed, and visualised datasets using Python (Pandas, NumPy) to support business reporting and decision-making.</li>
+          <li>Used PySpark on Databricks to process and transform large datasets for analysis.</li>
+          <li>Built interactive Power BI and Qlik Sense dashboards with KPI tiles and advanced charts, communicating insights to stakeholders with a focus on clarity and usability.</li>
+          <li>Designed data models and load scripts in Qlik Sense to structure and transform data for analytics.</li>
+        </ul>
+
+        <div class="pt-2 flex flex-wrap gap-2 text-xs font-mono text-slate-400">
+          <span class="bg-black/30 px-3 py-1 rounded">SQL Query Tuning</span>
+          <span class="bg-black/30 px-3 py-1 rounded">Python (Pandas, NumPy)</span>
+          <span class="bg-black/30 px-3 py-1 rounded">PySpark</span>
+          <span class="bg-black/30 px-3 py-1 rounded">Databricks</span>
+          <span class="bg-black/30 px-3 py-1 rounded">Power BI Dashboards</span>
+          <span class="bg-black/30 px-3 py-1 rounded">Qlik Sense Data Modeling</span>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ==================== CERTIFICATIONS & EDUCATION SECTION ==================== -->
+    <section class="py-12 px-6 md:px-12 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 relative z-10">
+      
+      <!-- Certifications -->
+      <div class="space-y-4">
+        <h3 class="text-2xl font-display font-bold text-white flex items-center gap-2">
+          <span class="w-2.5 h-2.5 rounded-full bg-[#FF4F12]"></span>
+          <span>Verified Certifications</span>
+        </h3>
+
+        <div class="space-y-3 text-xs">
+          <div class="p-4 rounded-2xl bg-[#131A2B]/80 border border-white/10 space-y-1">
+            <div class="flex justify-between font-mono text-[#FF4F12]"><span>2025</span><span>Qlik Official</span></div>
+            <div class="text-white font-bold text-sm">Qlik Sense Business Analyst Qualification</div>
+            <p class="text-slate-400 font-light">Interactive dashboards using associative model, KPI tiles, and advanced chart types.</p>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-[#131A2B]/80 border border-white/10 space-y-1">
+            <div class="flex justify-between font-mono text-[#FF4F12]"><span>2025</span><span>Qlik Official</span></div>
+            <div class="text-white font-bold text-sm">Qlik Sense Data Architect Qualification</div>
+            <p class="text-slate-400 font-light">Designed optimised data models and load scripts to structure and transform data for analytics.</p>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-[#131A2B]/80 border border-white/10 space-y-1">
+            <div class="flex justify-between font-mono text-[#FF4F12]"><span>2025</span><span>Executive Insights</span></div>
+            <div class="text-white font-bold text-sm">Data Visualization: Empowering Business with Effective Insights</div>
+            <p class="text-slate-400 font-light">Created executive-level Power BI dashboards for business trend analysis and storytelling.</p>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-[#131A2B]/80 border border-white/10 space-y-1">
+            <div class="flex justify-between font-mono text-[#FF4F12]"><span>August 2025</span><span>Tata Group</span></div>
+            <div class="text-white font-bold text-sm">Tata Group Data Analytics Job Simulation</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Education & Academics -->
+      <div class="space-y-4">
+        <h3 class="text-2xl font-display font-bold text-white flex items-center gap-2">
+          <span class="w-2.5 h-2.5 rounded-full bg-[#FF4F12]"></span>
+          <span>Education & Foundation</span>
+        </h3>
+
+        <div class="space-y-3 text-xs">
+          <div class="p-4 rounded-2xl bg-[#131A2B]/80 border border-white/10 space-y-1">
+            <div class="flex justify-between font-mono text-slate-400"><span>2022 – 2026</span><span class="text-[#FF4F12]">Reva University</span></div>
+            <div class="text-white font-bold text-sm">B.Tech — Computer Science and Engineering</div>
+            <p class="text-slate-400 font-light">Relevant Coursework: Database Management Systems (DBMS), Data Structures, Python, Statistical Methods.</p>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-[#131A2B]/80 border border-white/10 space-y-1">
+            <div class="flex justify-between font-mono text-slate-400"><span>2020 – 2022</span><span>Narayana Jr College</span></div>
+            <div class="text-white font-bold text-sm">Intermediate (Class 11–12)</div>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-[#131A2B]/80 border border-white/10 space-y-1">
+            <div class="flex justify-between font-mono text-slate-400"><span>2020</span><span>Uday Kiran English Medium School</span></div>
+            <div class="text-white font-bold text-sm">Secondary School Certificate (Class 10)</div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ==================== CONTACT SECTION ==================== -->
+    <section id="contact" class="py-24 px-6 md:px-12 max-w-7xl mx-auto relative z-10">
+      
+      <div class="p-8 sm:p-14 rounded-3xl bg-gradient-to-br from-[#131A2B] via-[#0E131F] to-[#0b0c10] border border-white/10 shadow-2xl text-center space-y-8">
+        
+        <div class="space-y-3 max-w-2xl mx-auto">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#FF4F12]/10 border border-[#FF4F12]/30 text-[#FF4F12] text-xs font-mono font-semibold">
+            <span>GET IN TOUCH</span>
+          </div>
+          <h2 class="text-3xl sm:text-5xl font-display font-extrabold text-white tracking-tight">
+            Let's Build Together.
+          </h2>
+          <p class="text-sm text-slate-300 font-light max-w-lg mx-auto leading-relaxed">
+            I am currently open to full-time Software Engineer and Data Analyst roles in Bengaluru, remote, or hybrid. Feel free to connect directly.
+          </p>
+        </div>
+
+        <div class="flex flex-wrap items-center justify-center gap-4 text-xs font-mono">
+          <a href="mailto:harshavardhan0764@gmail.com" class="hero-btn-primary !text-sm flex items-center gap-2">
+            <i data-lucide="mail" class="w-4 h-4"></i>
+            <span>harshavardhan0764@gmail.com</span>
+          </a>
+          <button onclick="copyContact('+919014467153')" class="hero-btn-secondary !text-white !border-white/20 !text-sm flex items-center gap-2 hover:!border-white">
+            <i data-lucide="phone" class="w-4 h-4 text-[#FF4F12]"></i>
+            <span>+91 9014467153</span>
+          </button>
+          <a href="https://linkedin.com/in/harsha-vardhan-reddy-c-data-analyst" target="_blank" rel="noopener noreferrer" class="hero-btn-secondary !text-white !border-white/20 !text-sm flex items-center gap-2 hover:!border-white">
+            <i data-lucide="linkedin" class="w-4 h-4 text-[#FF4F12]"></i>
+            <span>LinkedIn Profile</span>
+          </a>
+        </div>
+
+      </div>
+
+    </section>
+
+  </div>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="relative z-10 bg-[#0b0c10] border-t border-white/10 py-12 px-6 md:px-12 text-xs font-mono text-slate-500">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-2">
+        <span class="w-2 h-2 rounded-full bg-[#FF4F12]"></span>
+        <span class="text-white font-bold">Harsha Vardhan Reddy C</span>
+        <span>• B.Tech CSE '26, Reva University</span>
+      </div>
+      <div class="flex items-center gap-6 text-slate-400">
+        <a href="#hero" class="hover:text-white transition-colors">Back to Top ↑</a>
+        <a href="Harsha_Vardhan_Reddy_Resume.pdf" download class="hover:text-white transition-colors">Resume PDF</a>
+        <a href="u-and-i-cabs.apk" download class="hover:text-white transition-colors">U & I Cabs APK</a>
+        <a href="https://linkedin.com/in/harsha-vardhan-reddy-c-data-analyst" target="_blank" class="hover:text-white transition-colors">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== COMMAND PALETTE MODAL (Ctrl+K) ==================== -->
+  <div id="cmdPaletteModal" class="hidden fixed inset-0 z-50 flex items-start justify-center pt-24 px-4 bg-black/80 backdrop-blur-md">
+    <div class="w-full max-w-xl rounded-2xl border border-white/15 bg-[#121622] shadow-2xl overflow-hidden font-mono text-xs">
+      <div class="p-4 border-b border-white/10 flex items-center gap-3">
+        <i data-lucide="terminal" class="w-4 h-4 text-[#FF4F12]"></i>
+        <input id="cmdInput" type="text" placeholder="Type a command or jump to section (e.g. 'cabs', 'resume', 'skills')..." class="w-full bg-transparent text-white focus:outline-none text-xs placeholder-slate-500">
+        <button onclick="toggleCmdPalette()" class="text-slate-400 hover:text-white">
+          <i data-lucide="x" class="w-4 h-4"></i>
+        </button>
+      </div>
+      <div class="p-2 space-y-1">
+        <div onclick="jumpToSection('projects')" class="p-2.5 rounded-lg hover:bg-white/5 cursor-pointer flex items-center justify-between text-slate-300 hover:text-[#FF4F12]">
+          <span class="flex items-center gap-2"><i data-lucide="folder-git-2" class="w-3.5 h-3.5 text-[#FF4F12]"></i> U & I Cabs Android Project</span>
+          <span class="text-[10px] text-slate-500">#projects</span>
+        </div>
+        <div onclick="jumpToSection('experience')" class="p-2.5 rounded-lg hover:bg-white/5 cursor-pointer flex items-center justify-between text-slate-300 hover:text-[#FF4F12]">
+          <span class="flex items-center gap-2"><i data-lucide="briefcase" class="w-3.5 h-3.5 text-[#FF4F12]"></i> Tap Academy Internship</span>
+          <span class="text-[10px] text-slate-500">#experience</span>
+        </div>
+        <div onclick="jumpToSection('skills')" class="p-2.5 rounded-lg hover:bg-white/5 cursor-pointer flex items-center justify-between text-slate-300 hover:text-[#FF4F12]">
+          <span class="flex items-center gap-2"><i data-lucide="layers" class="w-3.5 h-3.5 text-[#FF4F12]"></i> Skills & Tooling</span>
+          <span class="text-[10px] text-slate-500">#skills</span>
+        </div>
+        <div onclick="downloadResumePDF()" class="p-2.5 rounded-lg hover:bg-white/5 cursor-pointer flex items-center justify-between text-slate-300 hover:text-[#FF4F12]">
+          <span class="flex items-center gap-2"><i data-lucide="download" class="w-3.5 h-3.5 text-[#FF4F12]"></i> Download PDF Resume</span>
+          <span class="text-[10px] text-slate-500">File</span>
+        </div>
+        <div onclick="downloadCabsAPK()" class="p-2.5 rounded-lg hover:bg-white/5 cursor-pointer flex items-center justify-between text-slate-300 hover:text-[#FF4F12]">
+          <span class="flex items-center gap-2"><i data-lucide="smartphone" class="w-3.5 h-3.5 text-[#FF4F12]"></i> Download U & I Cabs APK (14 MB)</span>
+          <span class="text-[10px] text-slate-500">APK</span>
+        </div>
+      </div>
+      <div class="p-3 bg-black/40 border-t border-white/10 text-[10px] text-slate-500 flex justify-between">
+        <span>Press ESC to close</span>
+        <span>Harsha Vardhan Portfolio v3.0</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="hidden fixed bottom-6 right-6 z-50 px-4 py-2.5 rounded-xl bg-[#181E2E] border border-[#FF4F12]/40 text-white text-xs font-mono shadow-2xl flex items-center gap-2">
+    <i data-lucide="check" class="w-4 h-4 text-[#FF4F12]"></i>
+    <span id="toastMsg">Action completed!</span>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
