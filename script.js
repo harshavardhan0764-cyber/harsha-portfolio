@@ -255,7 +255,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Navbar Dynamic Color Switch & ScrollSpy
+  // Navbar Dynamic Color Switch & ScrollSpy (Sivaram Charan 2-Zone Architecture)
   const navBrandName = document.getElementById('navBrandName');
   const siteNav = document.getElementById('siteNav');
   const heroSection = document.getElementById('hero');
@@ -264,9 +264,16 @@ document.addEventListener('DOMContentLoaded', () => {
   const mobileBtn = document.getElementById('mobileNavBtn');
 
   function updateNavbar() {
-    if (!heroSection) return;
-    const heroBottom = heroSection.getBoundingClientRect().bottom;
-    const isDarkSection = heroBottom <= 90;
+    const projectsSec = document.getElementById('projects');
+    // Zone 1 (Hero, About, Projects) = Light Theme (#faf9f7)
+    // Zone 2 (Skills, Experience, Contact) = Dark Theme (#0b0c10)
+    let lightBoundary = window.innerHeight;
+    if (projectsSec) {
+      const rect = projectsSec.getBoundingClientRect();
+      lightBoundary = rect.bottom + window.pageYOffset;
+    }
+    const isLight = (window.pageYOffset + 64 < lightBoundary);
+    const isDarkSection = !isLight;
 
     if (isDarkSection) {
       if (siteNav) {
@@ -313,17 +320,19 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // ScrollSpy for Nav Links
-    const sections = ['hero', 'about', 'skills', 'projects', 'experience', 'contact'];
+    const sections = ['hero', 'about', 'projects', 'skills', 'experience', 'contact'];
     let currentSection = 'hero';
-    sections.forEach(secId => {
-      const el = document.getElementById(secId);
+    const scrollPos = window.pageYOffset + 200;
+    for (let i = sections.length - 1; i >= 0; i--) {
+      const el = document.getElementById(sections[i]);
       if (el) {
-        const rect = el.getBoundingClientRect();
-        if (rect.top <= 200 && rect.bottom >= 200) {
-          currentSection = secId;
+        const top = el.getBoundingClientRect().top + window.pageYOffset;
+        if (top <= scrollPos) {
+          currentSection = sections[i];
+          break;
         }
       }
-    });
+    }
 
     const navLinks = document.querySelectorAll('#navLinks .nav-link');
     navLinks.forEach(link => {

@@ -112,17 +112,18 @@
   </header>
 
   <!-- Mobile Dropdown -->
-  <div id="mobileDropdown" class="hidden fixed inset-0 z-40 bg-black/80 backdrop-blur-lg pt-24 px-6 space-y-4 text-center">
+  <div id="mobileDropdown" class="hidden fixed inset-0 z-40 bg-black/90 backdrop-blur-lg pt-24 px-6 space-y-4 text-center">
     <a href="#hero" onclick="toggleMobileNav()" class="block py-3 text-lg font-display text-white border-b border-white/10">Home</a>
     <a href="#about" onclick="toggleMobileNav()" class="block py-3 text-lg font-display text-white border-b border-white/10">About</a>
-    <a href="#skills" onclick="toggleMobileNav()" class="block py-3 text-lg font-display text-white border-b border-white/10">Skills</a>
     <a href="#projects" onclick="toggleMobileNav()" class="block py-3 text-lg font-display text-white border-b border-white/10">Projects</a>
+    <a href="#skills" onclick="toggleMobileNav()" class="block py-3 text-lg font-display text-white border-b border-white/10">Skills</a>
     <a href="#experience" onclick="toggleMobileNav()" class="block py-3 text-lg font-display text-white border-b border-white/10">Experience</a>
     <a href="#contact" onclick="toggleMobileNav()" class="block py-3 text-lg font-display text-white">Contact</a>
     <div class="pt-4 flex flex-col gap-2">
       <a href="Harsha_Vardhan_Reddy_Resume.pdf" download class="hero-btn-primary justify-center">Download Resume (PDF)</a>
       <a href="u-and-i-cabs.apk" download class="hero-btn-secondary justify-center text-white border-white/30">Download U & I Cabs APK (14 MB)</a>
     </div>
+  </div>
   </div>
 
   <div id="main-content" class="relative">
@@ -145,16 +146,16 @@
         <!-- Big Editorial Headline Rows -->
         <h1 class="hero-headline !text-[#1a1a1a]">
           <span class="hero-headline-row">
-            <span class="hero-headline-clip"><span class="hero-headline-word !text-[#1a1a1a]">I</span></span>
-            <span class="hero-headline-clip"><span class="hero-headline-word !text-[#1a1a1a]">BUILD</span></span>
+            <span class="hero-headline-clip"><span class="hero-headline-word" style="color: #1a1a1a !important;">I</span></span>
+            <span class="hero-headline-clip"><span class="hero-headline-word" style="color: #1a1a1a !important;">BUILD</span></span>
           </span>
           <span class="hero-headline-row">
-            <span class="hero-headline-clip"><span class="hero-headline-word !text-[#1a1a1a]">DIGITAL</span></span>
-            <span class="hero-headline-clip"><span class="hero-headline-word !text-[#1a1a1a]">PRODUCTS</span></span>
+            <span class="hero-headline-clip"><span class="hero-headline-word" style="color: #1a1a1a !important;">DIGITAL</span></span>
+            <span class="hero-headline-clip"><span class="hero-headline-word" style="color: #1a1a1a !important;">PRODUCTS</span></span>
           </span>
           <span class="hero-headline-row">
-            <span class="hero-headline-clip"><span class="hero-headline-word !text-[#1a1a1a]">THAT</span></span>
-            <span class="hero-headline-clip"><span class="hero-headline-word !text-[#FF4F12]">THINK.</span></span>
+            <span class="hero-headline-clip"><span class="hero-headline-word" style="color: #1a1a1a !important;">THAT</span></span>
+            <span class="hero-headline-clip"><span class="hero-headline-word hero-headline-accent" style="color: #FF4F12 !important;">THINK.</span></span>
           </span>
         </h1>
 
@@ -371,8 +372,182 @@
 
     </section>
 
-    <!-- ==================== SKILLS SECTION (DARK OBSIDIAN THEME) ==================== -->
-    <section id="skills" class="py-24 px-6 md:px-12 max-w-7xl mx-auto relative z-10">
+    <section id="projects" class="projects-section py-24 px-6 md:px-12 max-w-7xl mx-auto relative z-10">
+      
+      <!-- Section Watermark -->
+      <div class="projects-bg-word" aria-hidden="true">PROJECTS</div>
+      <div class="projects-bg-grid" aria-hidden="true"></div>
+      <div class="projects-bg-dots" aria-hidden="true"></div>
+
+      <!-- Section Title -->
+      <div class="space-y-3 mb-12 text-center max-w-2xl mx-auto relative z-10">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#FF4F12]/10 border border-[#FF4F12]/30 text-[#FF4F12] text-xs font-mono font-semibold">
+          <span>REAL-WORLD SYSTEMS</span>
+        </div>
+        <h2 class="text-3xl sm:text-5xl font-display font-extrabold text-[#0b0b0b] tracking-tight">
+          Featured Projects
+        </h2>
+        <p class="text-xs sm:text-sm text-[#555] font-grotesk">
+          Production applications, analytical pipelines, and relational database systems.
+        </p>
+      </div>
+
+      <!-- Project Cards Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 relative z-10">
+        
+        <!-- PROJECT 1: U & I CABS -->
+        <div class="p-8 rounded-3xl bg-white border border-black/10 hover:border-[#FF4F12]/50 transition-all flex flex-col justify-between space-y-6 group shadow-md hover:shadow-xl">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-mono text-[#FF4F12] bg-[#FF4F12]/10 px-3 py-1 rounded-full font-semibold">
+                Android APK • Razorpay • REST APIs
+              </span>
+              <span class="text-xs font-mono text-[#777]">2026</span>
+            </div>
+
+            <h3 class="text-2xl font-display font-bold text-[#0b0b0b] group-hover:text-[#FF4F12] transition-colors">
+              U & I Cabs — Cab Booking Android Application
+            </h3>
+
+            <p class="text-sm text-[#555] leading-relaxed font-normal">
+              Developed a full-lifecycle cab booking Android application (packaged as APK and AAB) with a user-friendly interface, complete ride booking and cancellation workflows, and digital advance payments.
+            </p>
+
+            <ul class="text-xs text-[#666] space-y-2 list-disc list-inside font-normal">
+              <li><strong class="text-[#1a1a1a]">Razorpay Gateway Integration:</strong> Integrated UPI (Google Pay, PhonePe, Paytm) and digital cards for secure ride advance payments.</li>
+              <li><strong class="text-[#1a1a1a]">Backend APIs & Deployment:</strong> Connected client frontend with backend APIs, handled backend deployment, and configured payment verification flows.</li>
+              <li><strong class="text-[#1a1a1a]">Edge Case Handling:</strong> Resolved payment failures, trip cancellations, and user state with Git for source control.</li>
+            </ul>
+          </div>
+
+          <div class="pt-4 border-t border-black/10 flex items-center justify-between">
+            <div class="flex flex-wrap gap-2 text-xs font-mono text-[#777]">
+              <span class="bg-[#f4f1ea] text-[#555] px-2 py-0.5 rounded">Android SDK</span>
+              <span class="bg-[#f4f1ea] text-[#555] px-2 py-0.5 rounded">Razorpay</span>
+              <span class="bg-[#f4f1ea] text-[#555] px-2 py-0.5 rounded">REST APIs</span>
+            </div>
+            <a href="u-and-i-cabs.apk" download class="hero-btn-primary !py-2 !px-4 !text-xs flex items-center gap-1.5">
+              <i data-lucide="download" class="w-3.5 h-3.5"></i>
+              <span>Download APK (14 MB)</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- PROJECT 2: TAP ACADEMY DATA ANALYTICS & BI -->
+        <div class="p-8 rounded-3xl bg-white border border-black/10 hover:border-[#FF4F12]/50 transition-all flex flex-col justify-between space-y-6 group shadow-md hover:shadow-xl">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-mono text-[#FF4F12] bg-[#FF4F12]/10 px-3 py-1 rounded-full font-semibold">
+                Databricks • PySpark • SQL • BI
+              </span>
+              <span class="text-xs font-mono text-[#777]">Jun – Sep 2026</span>
+            </div>
+
+            <h3 class="text-2xl font-display font-bold text-[#0b0b0b] group-hover:text-[#FF4F12] transition-colors">
+              Enterprise Data Pipelines & BI Dashboards
+            </h3>
+
+            <p class="text-sm text-[#555] leading-relaxed font-normal">
+              Extracted, transformed, and visualised large-scale datasets during internship at Tap Academy, writing optimized SQL queries and scaling analytics with PySpark on Databricks.
+            </p>
+
+            <ul class="text-xs text-[#666] space-y-2 list-disc list-inside font-normal">
+              <li><strong class="text-[#1a1a1a]">SQL Optimization:</strong> Authored complex queries (joins, subqueries, GROUP BY) on relational databases to accelerate business reporting.</li>
+              <li><strong class="text-[#1a1a1a]">PySpark on Databricks:</strong> Scaled data pipeline transformations across high-volume dataset batches.</li>
+              <li><strong class="text-[#1a1a1a]">Executive KPI Dashboards:</strong> Constructed Power BI and Qlik Sense dashboards with KPI tiles and custom load scripts.</li>
+            </ul>
+          </div>
+
+          <div class="pt-4 border-t border-black/10 flex items-center justify-between">
+            <div class="flex flex-wrap gap-2 text-xs font-mono text-[#777]">
+              <span class="bg-[#f4f1ea] text-[#555] px-2 py-0.5 rounded">SQL</span>
+              <span class="bg-[#f4f1ea] text-[#555] px-2 py-0.5 rounded">PySpark</span>
+              <span class="bg-[#f4f1ea] text-[#555] px-2 py-0.5 rounded">Databricks</span>
+              <span class="bg-[#f4f1ea] text-[#555] px-2 py-0.5 rounded">Power BI</span>
+            </div>
+            <a href="Harsha_Vardhan_Reddy_Resume.pdf" download class="text-xs font-mono text-[#FF4F12] hover:text-[#ff7a5c] flex items-center gap-1 font-semibold">
+              <span>View Case Study</span> <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- PROJECT 3: EXPLORATORY DATA ANALYSIS -->
+        <div class="p-8 rounded-3xl bg-white border border-black/10 hover:border-[#FF4F12]/50 transition-all flex flex-col justify-between space-y-6 group shadow-md hover:shadow-xl">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-mono text-[#FF4F12] bg-[#FF4F12]/10 px-3 py-1 rounded-full font-semibold">
+                Python • Pandas • Seaborn
+              </span>
+              <span class="text-xs font-mono text-[#777]">April 2024</span>
+            </div>
+
+            <h3 class="text-2xl font-display font-bold text-[#0b0b0b] group-hover:text-[#FF4F12] transition-colors">
+              Exploratory Data Analysis & Statistical Modeling
+            </h3>
+
+            <p class="text-sm text-[#555] leading-relaxed font-normal">
+              Conducted exhaustive data cleaning, hypothesis validation, distribution curve testing, and correlation heatmaps to surface latent business patterns.
+            </p>
+
+            <ul class="text-xs text-[#666] space-y-2 list-disc list-inside font-normal">
+              <li><strong class="text-[#1a1a1a]">Data Cleansing:</strong> Imputed missing attributes, handled skewed distributions, and pruned statistical outliers.</li>
+              <li><strong class="text-[#1a1a1a]">Correlation Heatmaps:</strong> Identified multi-collinearity and statistical variance using Matplotlib and Seaborn.</li>
+              <li><strong class="text-[#1a1a1a]">Stakeholder Storytelling:</strong> Documented findings clearly so takeaways could be acted on by leadership.</li>
+            </ul>
+          </div>
+
+          <div class="pt-4 border-t border-black/10 flex items-center justify-between">
+            <div class="flex flex-wrap gap-2 text-xs font-mono text-[#777]">
+              <span class="bg-[#f4f1ea] text-[#555] px-2 py-0.5 rounded">Python</span>
+              <span class="bg-[#f4f1ea] text-[#555] px-2 py-0.5 rounded">Pandas</span>
+              <span class="bg-[#f4f1ea] text-[#555] px-2 py-0.5 rounded">NumPy</span>
+              <span class="bg-[#f4f1ea] text-[#555] px-2 py-0.5 rounded">Seaborn</span>
+            </div>
+            <span class="text-xs font-mono text-[#888]">Data Science</span>
+          </div>
+        </div>
+
+        <!-- PROJECT 4: ZOO MANAGEMENT SYSTEM -->
+        <div class="p-8 rounded-3xl bg-white border border-black/10 hover:border-[#FF4F12]/50 transition-all flex flex-col justify-between space-y-6 group shadow-md hover:shadow-xl">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-mono text-[#FF4F12] bg-[#FF4F12]/10 px-3 py-1 rounded-full font-semibold">
+                Relational Database • MySQL
+              </span>
+              <span class="text-xs font-mono text-[#777]">2023</span>
+            </div>
+
+            <h3 class="text-2xl font-display font-bold text-[#0b0b0b] group-hover:text-[#FF4F12] transition-colors">
+              Zoo Management Database System
+            </h3>
+
+            <p class="text-sm text-[#555] leading-relaxed font-normal">
+              Designed a database-driven management application with a normalized MySQL backend, implementing full CRUD operations and cross-table SQL JOIN reporting.
+            </p>
+
+            <ul class="text-xs text-[#666] space-y-2 list-disc list-inside font-normal">
+              <li><strong class="text-[#1a1a1a]">Normalized 3NF Schema:</strong> Structured entities for animals, enclosures, caretakers, and ticket sales to prevent update anomalies.</li>
+              <li><strong class="text-[#1a1a1a]">Optimized Queries:</strong> Authored indexed SQL retrieval queries adhering to OOP principles and SDLC practices.</li>
+              <li><strong class="text-[#1a1a1a]">Workflow Design:</strong> Structured around end-user workflows to keep data entry and reporting simple and easy to use.</li>
+            </ul>
+          </div>
+
+          <div class="pt-4 border-t border-black/10 flex items-center justify-between">
+            <div class="flex flex-wrap gap-2 text-xs font-mono text-[#777]">
+              <span class="bg-[#f4f1ea] text-[#555] px-2 py-0.5 rounded">MySQL</span>
+              <span class="bg-[#f4f1ea] text-[#555] px-2 py-0.5 rounded">3NF Schema</span>
+              <span class="bg-[#f4f1ea] text-[#555] px-2 py-0.5 rounded">SQL Joins</span>
+              <span class="bg-[#f4f1ea] text-[#555] px-2 py-0.5 rounded">CRUD</span>
+            </div>
+            <span class="text-xs font-mono text-[#888]">Database Design</span>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <section id="skills" class="bg-[#0b0c10] py-24 px-6 md:px-12 max-w-7xl mx-auto relative z-10">
       
       <!-- Section Watermark -->
       <div class="skills-bg-word" aria-hidden="true">SKILLS</div>
@@ -522,182 +697,6 @@
           </div>
           <div class="font-bold text-white text-base">SDLC & Testing</div>
           <div class="text-[11px] text-slate-400 font-light">Requirements, E2E Testing & Clear Documentation</div>
-        </div>
-
-      </div>
-
-    </section>
-
-    <!-- ==================== FEATURED PROJECTS SECTION ==================== -->
-    <section id="projects" class="projects-section py-24 px-6 md:px-12 max-w-7xl mx-auto relative z-10">
-      
-      <!-- Section Watermark -->
-      <div class="projects-bg-word" aria-hidden="true">PROJECTS</div>
-      <div class="projects-bg-grid" aria-hidden="true"></div>
-      <div class="projects-bg-dots" aria-hidden="true"></div>
-
-      <!-- Section Title -->
-      <div class="space-y-3 mb-12 text-center max-w-2xl mx-auto relative z-10">
-        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#FF4F12]/10 border border-[#FF4F12]/30 text-[#FF4F12] text-xs font-mono font-semibold">
-          <span>REAL-WORLD SYSTEMS</span>
-        </div>
-        <h2 class="text-3xl sm:text-5xl font-display font-extrabold text-white tracking-tight">
-          Featured Projects
-        </h2>
-        <p class="text-xs sm:text-sm text-slate-400 font-grotesk">
-          Production applications, analytical pipelines, and relational database systems.
-        </p>
-      </div>
-
-      <!-- Project Cards Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 relative z-10">
-        
-        <!-- PROJECT 1: U & I CABS -->
-        <div class="p-8 rounded-3xl bg-[#131A2B]/90 border border-white/10 hover:border-[#FF4F12]/50 transition-all flex flex-col justify-between space-y-6 backdrop-blur-xl group shadow-xl">
-          <div class="space-y-4">
-            <div class="flex items-center justify-between">
-              <span class="text-xs font-mono text-[#FF4F12] bg-[#FF4F12]/10 px-3 py-1 rounded-full font-semibold">
-                Android APK • Razorpay • REST APIs
-              </span>
-              <span class="text-xs font-mono text-slate-400">2026</span>
-            </div>
-
-            <h3 class="text-2xl font-display font-bold text-white group-hover:text-[#FF4F12] transition-colors">
-              U & I Cabs — Cab Booking Android Application
-            </h3>
-
-            <p class="text-sm text-slate-300 leading-relaxed font-light">
-              Developed a full-lifecycle cab booking Android application (packaged as APK and AAB) with a user-friendly interface, complete ride booking and cancellation workflows, and digital advance payments.
-            </p>
-
-            <ul class="text-xs text-slate-400 space-y-2 list-disc list-inside font-light">
-              <li><strong class="text-white">Razorpay Gateway Integration:</strong> Integrated UPI (Google Pay, PhonePe, Paytm) and digital cards for secure ride advance payments.</li>
-              <li><strong class="text-white">Backend APIs & Deployment:</strong> Connected client frontend with backend APIs, handled backend deployment, and configured payment verification flows.</li>
-              <li><strong class="text-white">Edge Case Handling:</strong> Resolved payment failures, trip cancellations, and user state with Git for source control.</li>
-            </ul>
-          </div>
-
-          <div class="pt-4 border-t border-white/10 flex items-center justify-between">
-            <div class="flex flex-wrap gap-2 text-xs font-mono text-slate-400">
-              <span class="bg-black/30 px-2 py-0.5 rounded">Android SDK</span>
-              <span class="bg-black/30 px-2 py-0.5 rounded">Razorpay</span>
-              <span class="bg-black/30 px-2 py-0.5 rounded">REST APIs</span>
-            </div>
-            <a href="u-and-i-cabs.apk" download class="hero-btn-primary !py-2 !px-4 !text-xs flex items-center gap-1.5">
-              <i data-lucide="download" class="w-3.5 h-3.5"></i>
-              <span>Download APK (14 MB)</span>
-            </a>
-          </div>
-        </div>
-
-        <!-- PROJECT 2: TAP ACADEMY DATA ANALYTICS & BI -->
-        <div class="p-8 rounded-3xl bg-[#131A2B]/90 border border-white/10 hover:border-[#FF4F12]/50 transition-all flex flex-col justify-between space-y-6 backdrop-blur-xl group shadow-xl">
-          <div class="space-y-4">
-            <div class="flex items-center justify-between">
-              <span class="text-xs font-mono text-[#FF4F12] bg-[#FF4F12]/10 px-3 py-1 rounded-full font-semibold">
-                Databricks • PySpark • SQL • BI
-              </span>
-              <span class="text-xs font-mono text-slate-400">Jun – Sep 2026</span>
-            </div>
-
-            <h3 class="text-2xl font-display font-bold text-white group-hover:text-[#FF4F12] transition-colors">
-              Enterprise Data Pipelines & BI Dashboards
-            </h3>
-
-            <p class="text-sm text-slate-300 leading-relaxed font-light">
-              Extracted, transformed, and visualised large-scale datasets during internship at Tap Academy, writing optimized SQL queries and scaling analytics with PySpark on Databricks.
-            </p>
-
-            <ul class="text-xs text-slate-400 space-y-2 list-disc list-inside font-light">
-              <li><strong class="text-white">SQL Optimization:</strong> Authored complex queries (joins, subqueries, GROUP BY) on relational databases to accelerate business reporting.</li>
-              <li><strong class="text-white">PySpark on Databricks:</strong> Scaled data pipeline transformations across high-volume dataset batches.</li>
-              <li><strong class="text-white">Executive KPI Dashboards:</strong> Constructed Power BI and Qlik Sense dashboards with KPI tiles and custom load scripts.</li>
-            </ul>
-          </div>
-
-          <div class="pt-4 border-t border-white/10 flex items-center justify-between">
-            <div class="flex flex-wrap gap-2 text-xs font-mono text-slate-400">
-              <span class="bg-black/30 px-2 py-0.5 rounded">SQL</span>
-              <span class="bg-black/30 px-2 py-0.5 rounded">PySpark</span>
-              <span class="bg-black/30 px-2 py-0.5 rounded">Databricks</span>
-              <span class="bg-black/30 px-2 py-0.5 rounded">Power BI</span>
-            </div>
-            <a href="Harsha_Vardhan_Reddy_Resume.pdf" download class="text-xs font-mono text-[#FF4F12] hover:text-[#ff7a5c] flex items-center gap-1 font-semibold">
-              <span>View Case Study</span> <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
-            </a>
-          </div>
-        </div>
-
-        <!-- PROJECT 3: EXPLORATORY DATA ANALYSIS -->
-        <div class="p-8 rounded-3xl bg-[#131A2B]/90 border border-white/10 hover:border-[#FF4F12]/50 transition-all flex flex-col justify-between space-y-6 backdrop-blur-xl group shadow-xl">
-          <div class="space-y-4">
-            <div class="flex items-center justify-between">
-              <span class="text-xs font-mono text-[#FF4F12] bg-[#FF4F12]/10 px-3 py-1 rounded-full font-semibold">
-                Python • Pandas • Seaborn
-              </span>
-              <span class="text-xs font-mono text-slate-400">April 2024</span>
-            </div>
-
-            <h3 class="text-2xl font-display font-bold text-white group-hover:text-[#FF4F12] transition-colors">
-              Exploratory Data Analysis & Statistical Modeling
-            </h3>
-
-            <p class="text-sm text-slate-300 leading-relaxed font-light">
-              Conducted exhaustive data cleaning, hypothesis validation, distribution curve testing, and correlation heatmaps to surface latent business patterns.
-            </p>
-
-            <ul class="text-xs text-slate-400 space-y-2 list-disc list-inside font-light">
-              <li><strong class="text-white">Data Cleansing:</strong> Imputed missing attributes, handled skewed distributions, and pruned statistical outliers.</li>
-              <li><strong class="text-white">Correlation Heatmaps:</strong> Identified multi-collinearity and statistical variance using Matplotlib and Seaborn.</li>
-              <li><strong class="text-white">Stakeholder Storytelling:</strong> Documented findings clearly so takeaways could be acted on by leadership.</li>
-            </ul>
-          </div>
-
-          <div class="pt-4 border-t border-white/10 flex items-center justify-between">
-            <div class="flex flex-wrap gap-2 text-xs font-mono text-slate-400">
-              <span class="bg-black/30 px-2 py-0.5 rounded">Python</span>
-              <span class="bg-black/30 px-2 py-0.5 rounded">Pandas</span>
-              <span class="bg-black/30 px-2 py-0.5 rounded">NumPy</span>
-              <span class="bg-black/30 px-2 py-0.5 rounded">Seaborn</span>
-            </div>
-            <span class="text-xs font-mono text-slate-500">Data Science</span>
-          </div>
-        </div>
-
-        <!-- PROJECT 4: ZOO MANAGEMENT SYSTEM -->
-        <div class="p-8 rounded-3xl bg-[#131A2B]/90 border border-white/10 hover:border-[#FF4F12]/50 transition-all flex flex-col justify-between space-y-6 backdrop-blur-xl group shadow-xl">
-          <div class="space-y-4">
-            <div class="flex items-center justify-between">
-              <span class="text-xs font-mono text-[#FF4F12] bg-[#FF4F12]/10 px-3 py-1 rounded-full font-semibold">
-                Relational Database • MySQL
-              </span>
-              <span class="text-xs font-mono text-slate-400">2023</span>
-            </div>
-
-            <h3 class="text-2xl font-display font-bold text-white group-hover:text-[#FF4F12] transition-colors">
-              Zoo Management Database System
-            </h3>
-
-            <p class="text-sm text-slate-300 leading-relaxed font-light">
-              Designed a database-driven management application with a normalized MySQL backend, implementing full CRUD operations and cross-table SQL JOIN reporting.
-            </p>
-
-            <ul class="text-xs text-slate-400 space-y-2 list-disc list-inside font-light">
-              <li><strong class="text-white">Normalized 3NF Schema:</strong> Structured entities for animals, enclosures, caretakers, and ticket sales to prevent update anomalies.</li>
-              <li><strong class="text-white">Optimized Queries:</strong> Authored indexed SQL retrieval queries adhering to OOP principles and SDLC practices.</li>
-              <li><strong class="text-white">Workflow Design:</strong> Structured around end-user workflows to keep data entry and reporting simple and easy to use.</li>
-            </ul>
-          </div>
-
-          <div class="pt-4 border-t border-white/10 flex items-center justify-between">
-            <div class="flex flex-wrap gap-2 text-xs font-mono text-slate-400">
-              <span class="bg-black/30 px-2 py-0.5 rounded">MySQL</span>
-              <span class="bg-black/30 px-2 py-0.5 rounded">3NF Schema</span>
-              <span class="bg-black/30 px-2 py-0.5 rounded">SQL Joins</span>
-              <span class="bg-black/30 px-2 py-0.5 rounded">CRUD</span>
-            </div>
-            <span class="text-xs font-mono text-slate-500">Database Design</span>
-          </div>
         </div>
 
       </div>

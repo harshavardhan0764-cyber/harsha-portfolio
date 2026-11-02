@@ -5,3 +5,18 @@
 
 .hero-headline-word{color:#1a1a1a!important;opacity:1!important;visibility:visible!important}
 .hero-headline-word.hero-headline-accent{color:#FF4F12!important}
+
+/* Ivory Zone (Hero, About, Projects) */
+.hero-section,
+.about-section,
+.projects-section {
+  background-color: #faf9f7 !important;
+}
+
+/* Obsidian Zone (Skills, Experience, Contact) */
+.skills-section,
+#skills,
+#experience,
+#contact {
+  background-color: #0b0c10 !important;
+}
