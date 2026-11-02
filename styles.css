@@ -2,3 +2,6 @@
 
 #siteNav{margin:0!important;padding:0!important;top:0!important;left:0!important;right:0!important;height:64px!important;line-height:normal!important;text-align:left!important;border-bottom:none!important}
 #hero{margin-top:0!important;padding-top:0!important}
+
+.hero-headline-word{color:#1a1a1a!important;opacity:1!important;visibility:visible!important}
+.hero-headline-word.hero-headline-accent{color:#FF4F12!important}
