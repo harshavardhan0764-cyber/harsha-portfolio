@@ -264,15 +264,14 @@ document.addEventListener('DOMContentLoaded', () => {
   const mobileBtn = document.getElementById('mobileNavBtn');
 
   function updateNavbar() {
-    const projectsSec = document.getElementById('projects');
-    // Zone 1 (Hero, About, Projects) = Light Theme (#faf9f7)
-    // Zone 2 (Skills, Experience, Contact) = Dark Theme (#0b0c10)
-    let lightBoundary = window.innerHeight;
-    if (projectsSec) {
-      const rect = projectsSec.getBoundingClientRect();
-      lightBoundary = rect.bottom + window.pageYOffset;
+    // Home (Hero) = Light (#faf9f7)
+    // ALL REMAINING SECTIONS = Black Background (#0b0c10)
+    const heroSec = document.getElementById('hero');
+    let heroBoundary = window.innerHeight - 80;
+    if (heroSec) {
+      heroBoundary = heroSec.offsetHeight - 80;
     }
-    const isLight = (window.pageYOffset + 64 < lightBoundary);
+    const isLight = (window.pageYOffset < heroBoundary);
     const isDarkSection = !isLight;
 
     if (isDarkSection) {

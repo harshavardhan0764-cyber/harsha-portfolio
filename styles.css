@@ -6,17 +6,81 @@
 .hero-headline-word{color:#1a1a1a!important;opacity:1!important;visibility:visible!important}
 .hero-headline-word.hero-headline-accent{color:#FF4F12!important}
 
-/* Ivory Zone (Hero, About, Projects) */
+/* HOME Page remains Light Ivory (#faf9f7) */
 .hero-section,
-.about-section,
-.projects-section {
+#hero {
   background-color: #faf9f7 !important;
+  color: #1a1a1a !important;
 }
 
-/* Obsidian Zone (Skills, Experience, Contact) */
+/* ALL REMAINING SECTIONS: Black Background (#0b0c10) */
+.about-section,
+.projects-section,
 .skills-section,
+#about,
+#projects,
 #skills,
 #experience,
-#contact {
+#contact,
+footer {
   background-color: #0b0c10 !important;
+  color: #ffffff !important;
 }
+
+/* Dark mode text & element overrides for About and Projects */
+.about-section,
+.projects-section {
+  color: #ffffff !important;
+}
+.about-section h2,
+.about-section h3,
+.about-section h4,
+.projects-section h2,
+.projects-section h3,
+.projects-section h4 {
+  color: #ffffff !important;
+}
+.about-opening-heading {
+  color: #ffffff !important;
+}
+.about-bio {
+  color: #cbd5e1 !important;
+}
+.about-handwriting {
+  color: #94a3b8 !important;
+}
+.about-bg-word,
+.projects-bg-word {
+  color: rgba(255, 255, 255, 0.02) !important;
+}
+.about-bg-grid,
+.projects-bg-grid {
+  opacity: 0.03 !important;
+  background-image: linear-gradient(#ffffff 1px, transparent 1px), linear-gradient(90deg, #ffffff 1px, transparent 1px) !important;
+}
+.about-bg-dots,
+.projects-bg-dots {
+  opacity: 0.03 !important;
+  background-image: radial-gradient(circle, #ffffff 1px, transparent 1px) !important;
+}
+.about-nav-item span:last-child {
+  color: #94a3b8 !important;
+}
+.about-nav-item.active span:last-child {
+  color: #FF4F12 !important;
+}
+.about-nav-header {
+  color: #64748b !important;
+}
+.about-story-block {
+  background: rgba(19, 26, 43, 0.8) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  color: #ffffff !important;
+}
+.about-story-block-title {
+  color: #ffffff !important;
+}
+.about-story-block-desc {
+  color: #94a3b8 !important;
+}
+
