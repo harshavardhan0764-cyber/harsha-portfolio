@@ -262,6 +262,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const audioBtn = document.getElementById('audioToggleBtn');
   const cmdBtn = document.querySelector('button[title^="Command Menu"]');
   const mobileBtn = document.getElementById('mobileNavBtn');
+  const navLinkedInBtn = document.getElementById('navLinkedInBtn');
 
   function updateNavbar() {
     // Home (Hero) = Light (#faf9f7)
@@ -295,6 +296,10 @@ document.addEventListener('DOMContentLoaded', () => {
         mobileBtn.classList.remove('text-[#1a1a1a]');
         mobileBtn.classList.add('text-white');
       }
+      if (navLinkedInBtn) {
+        navLinkedInBtn.classList.remove('border-black/10', 'text-[#555]');
+        navLinkedInBtn.classList.add('border-white/10', 'text-slate-300');
+      }
     } else {
       if (siteNav) {
         siteNav.classList.remove('bg-[#0b0c10]/95', 'lg:bg-[#0b0c10]/85', 'border-white/10', 'shadow-2xl');
@@ -315,6 +320,10 @@ document.addEventListener('DOMContentLoaded', () => {
       if (mobileBtn) {
         mobileBtn.classList.remove('text-white');
         mobileBtn.classList.add('text-[#1a1a1a]');
+      }
+      if (navLinkedInBtn) {
+        navLinkedInBtn.classList.remove('border-white/10', 'text-slate-300');
+        navLinkedInBtn.classList.add('border-black/10', 'text-[#555]');
       }
     }
 
